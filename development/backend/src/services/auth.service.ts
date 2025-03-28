@@ -1,8 +1,8 @@
-import { AppError } from "src/utils/errors";
-import prisma from "../utils/prisma";
 import { compare } from "bcryptjs";
-import { config } from "../config";
 import { sign } from "jsonwebtoken";
+import { AppError } from "../utils/errors";
+import { config } from "../config";
+import prisma from "../utils/prisma";
 
 export const login = async (email: string, password: string) => {
   const admin = await prisma.admin.findUnique({ where: { email } });

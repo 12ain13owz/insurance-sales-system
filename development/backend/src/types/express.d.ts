@@ -1,7 +1,12 @@
-import { Response } from "express";
+import { JwtPayload } from "jsonwebtoken";
 
-interface CustomResponseLocals {
-  user: string;
+interface AdminPayload {
+  id: string;
+  email: string;
 }
 
-type AppRes = Response & { locals: CustomResponseLocals };
+declare module "express" {
+  interface Request {
+    admin?: AdminPayload;
+  }
+}

@@ -40,6 +40,9 @@
     // Experimental Features
     "experimentalDecorators": true, // เปิดใช้งาน decorators
     "emitDecoratorMetadata": true // emit metadata สำหรับ decorators
+
+    // กำหนด Types
+    // "typeRoots": ["./types", "./node_modules/@types"]
   },
   "include": [
     "src/**/*.ts" // รวมไฟล์ทั้งหมดใน src directory
